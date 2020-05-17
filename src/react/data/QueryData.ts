@@ -270,14 +270,14 @@ export class QueryData<TData, TVariables> extends OperationData {
         const previousResult = this.previousData.result;
 
         // Make sure we're not attempting to re-render similar results
-        if (
-          previousResult &&
-          previousResult.loading === loading &&
-          previousResult.networkStatus === networkStatus &&
-          equal(previousResult.data, data)
-        ) {
-          return;
-        }
+//         if (
+//           previousResult &&
+//           previousResult.loading === loading &&
+//           previousResult.networkStatus === networkStatus &&
+//           equal(previousResult.data, data)
+//         ) {
+//           return;
+//         }
 
         // If we skipped previously, `previousResult.data` is set to undefined.
         // When this subscription is run after skipping, Apollo Client sends
